@@ -1,0 +1,126 @@
+*{
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+}
+
+body, h1, h3, ul{
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+.container{
+   width: 1300px;
+   margin: 0 auto;
+}
+
+header{
+   position: relative; /* for absolute children */
+   height: 523px;
+   background-image: url('http://unsplash.it/1300/523/');
+}
+
+header:before{
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 96, 172, 0.6);
+}
+
+
+
+nav{
+   padding-top: 10px;
+   height: 55px;
+   position: relative;
+}
+
+
+/*https://css-tricks.com/centering-in-the-unknown/*/
+
+/*
+.nav::before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+   margin-right: -0.25em;
+}
+*/
+
+nav ul{
+   display: inline-block;
+   list-style: none;
+   /*margin: 0;
+   padding: 0;*/
+}
+
+nav li{
+   display: inline-block;
+}
+
+.logo {
+   height: 45px;
+}
+
+.brand{
+   position: relative;
+
+   height: 45px;
+   width: 420px;
+   padding-left: 140px;
+
+   /* get main-nav on same line  */
+   display: inline-block; /* is this the right way? */
+}
+
+.company-name, .main-nav{
+   margin:0;
+   position: absolute;
+   line-height: 45px;
+
+   text-transform: uppercase;
+}
+
+.company-name {
+   margin-left: 13px;
+   vertical-align: middle;
+}
+
+.main-nav {
+   right: 190px;
+   top: 8px;
+   /*padding-right: 8px;*/
+}
+
+.main-nav  a {
+   color: black;    /* TODO get correct color */
+   font-size: 18px;
+   margin-left: 10px;
+
+   font-family: 'Oswald', sans-serif;
+}
+
+header h1 {
+   position: relative;
+   text-align: center;
+
+   color: white;
+   font-size: 97px;
+   text-transform: uppercase;
+
+   padding-top: 140px;
+
+}
+
+header h3 {
+   position: relative;
+   text-align: center;
+   margin-top: -20px;
+}
