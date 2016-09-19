@@ -3,18 +3,19 @@
    font-family: 'Open Sans', sans-serif;
 }
 
-body, h1, h3, ul{
+body, h1, h2, h3, ul, p{
    margin: 0;
    padding: 0;
 }
 
-a {
+:link {
    text-decoration: none;
 }
 
 .container{
    width: 1300px;
    margin: 0 auto;
+   position:relative;
 }
 
 header{
@@ -33,32 +34,15 @@ header:before{
    background-color: rgba(0, 96, 172, 0.6);
 }
 
-
-
-nav{
+nav {
    padding-top: 10px;
    height: 55px;
    position: relative;
 }
 
-
-/*https://css-tricks.com/centering-in-the-unknown/*/
-
-/*
-.nav::before {
-   content: '';
-   display: inline-block;
-   height: 100%;
-   vertical-align: middle;
-   margin-right: -0.25em;
-}
-*/
-
 nav ul{
    display: inline-block;
    list-style: none;
-   /*margin: 0;
-   padding: 0;*/
 }
 
 nav li{
@@ -71,20 +55,16 @@ nav li{
 
 .brand{
    position: relative;
-
    height: 45px;
    width: 420px;
    padding-left: 140px;
-
-   /* get main-nav on same line  */
-   display: inline-block; /* is this the right way? */
+   display: inline-block;
 }
 
 .company-name, .main-nav{
    margin:0;
    position: absolute;
    line-height: 45px;
-
    text-transform: uppercase;
 }
 
@@ -96,14 +76,12 @@ nav li{
 .main-nav {
    right: 190px;
    top: 8px;
-   /*padding-right: 8px;*/
 }
 
 .main-nav  a {
-   color: black;    /* TODO get correct color */
+   color: #0b3550;
    font-size: 18px;
    margin-left: 10px;
-
    font-family: 'Oswald', sans-serif;
 }
 
@@ -120,7 +98,244 @@ header h1 {
 }
 
 header h3 {
+   color:#083451
    position: relative;
    text-align: center;
-   margin-top: -20px;
+   margin-top: -16px;
+   font-size: 15px;
+
+}
+
+article {
+   float:left;
+   width: 800px;
+   padding-left: 164px;
+   padding-top: 62px;
+   margin-bottom: 68px;
+}
+
+.post-title {
+   font-family: 'Oswald', sans-serif;
+   font-size: 62px;
+   text-transform: uppercase;
+   line-height: 70px;
+   font-weight:400;
+   color: #0b3551
+
+}
+
+
+.post-meta {
+   position: relative;
+   /*line-height: 22px;*/
+   height: 22px;
+   left: 3px;
+   top: 7px;
+
+}
+
+
+.post-meta .user-icon {
+   width: 22px;
+   height: 22px;
+   border-radius: 50%;
+   float:left;
+
+}
+
+.post-meta .user-name {
+   display: inline-block;
+   position:relative;
+   color:#196fb1
+   font-size: 12px;
+   /*height: 22px;*/
+   line-height: 22px;
+   padding-left: 9px;
+   font-weight: bold;
+   vertical-align: middle;
+}
+
+.post-meta .timestamp {
+      display:inline;
+      position:relative;
+      left: 12px;
+      vertical-align: text-bottom;
+      font-size: 13px;
+      font-weight: bold;
+      color: #a3b3be;
+
+}
+
+.post-meta .date-time {
+   text-decoration: underline;
+}
+
+.post-content{
+position:relative;
+margin-top: 30px;
+
+}
+
+.post-content p{
+   line-height: 26px;
+   padding: 13px 0;
+   margin-bottom: 1px;
+}
+
+.post-content h3 {
+   position:relative;
+   margin: 2px 0px 15px 5px;
+   /*height: 56px;*/
+   color:#196fb1;
+   border-left: 2px solid lightgray;
+   font-size: 28px;
+   text-transform: uppercase;
+   padding: 17px 0 8px 16px;
+}
+
+
+.post-buttons {
+   margin-top: 20px;
+}
+
+.button-comments, .button-later, .button-share {
+   display:inline-block;
+   background-color: #A3B3BE;
+   color: white;
+   height: 30px;
+   width:158px;
+   margin-right: 10px;
+   line-height: 30px;
+   white-space: nowrap;
+}
+
+.button-later {
+   width:128px;
+}
+
+.button-share {
+   background-color: #196fb1;
+   width: 154px;
+}
+
+.button-text {
+   font-size: 10px;
+   padding-left: 8px;
+   /*width: 125px;*/
+}
+
+.comment-icon, .later-icon, .share-icon{
+   display:inline-block;
+   background-color: #5e686f;
+   text-align: center;
+   width: 33px;
+   height: 30px;
+   font-family: FontAwesome;
+}
+
+.share-icon{
+   background-color: #0b3551;
+}
+
+.comment-icon:before {
+   content: "\f075";
+   color: white;
+   font-size: 16px;
+}
+
+.later-icon:before {
+   content: "\f0ee";
+   color: white;
+   font-size: 16px;
+}
+
+.share-icon:before {
+   content: "\f045";
+   color: white;
+   font-size: 16px;
+}
+
+
+aside {
+   float:right;
+   width: 300px;
+   margin: 68px 148px 0 52px;
+
+
+}
+
+aside .user-image {
+position: relative;
+margin: 14px 107.5px 4px 107.5px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.user-name {
+   text-transform: uppercase;
+   color: #196fb1;
+   text-align: center;
+   font-size: 16px;
+
+}
+
+
+.social-links {
+   list-style: none;
+   text-align: center;
+}
+
+.social-links li {
+   display: inline-block;
+   text-align: center;
+   font-size: 13px;
+   padding: 0 5px 50px 5px;
+}
+
+.social-links a {
+   color: #a3b3be;
+}
+
+.advert {
+   text-align: right;
+   padding: 0 11px;
+}
+
+.advert > a {
+   text-decoration: underline;
+   color: #bac6cf;
+}
+
+aside > section {
+   position: relative;
+   margin: 40px 10px;
+
+}
+
+aside > section h2 {
+   position: relative;
+   width:300px;
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   color: #196fb1;
+   font-size: 18px;
+   margin-bottom: 4px;
+
+
+}
+
+aside > section p {
+   color: #a3b3be;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+
+/*http://stackoverflow.com/a/14821134*/
+hr {
+   display: block;
+   margin-top: 68px;
+   border: 0;
+   padding: 0;
+   border-top: 1px solid e1e7ea;
 }
