@@ -507,8 +507,8 @@ footer {
       padding-right: 4px;
 }
 
+/*https://www.jackreichert.com/2011/07/how-to-add-a-divider-between-menu-items-in-css-using-only-one-selector/*/
 .footer-nav > li + li{
-
    padding-left: 8px;
    border-left: 1px solid #5e686f;
 }
