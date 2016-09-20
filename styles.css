@@ -8,9 +8,7 @@ body, h1, h2, h3, ul, p{
    padding: 0;
 }
 
-:link {
-   text-decoration: none;
-}
+:link { text-decoration: none; }
 
 .container{
    width: 1300px;
@@ -24,7 +22,7 @@ header{
    background-image: url('http://unsplash.it/1300/523/');
 }
 
-header:before{
+header::before{
    content: "";
    position: absolute;
    top: 0;
@@ -45,13 +43,9 @@ nav ul{
    list-style: none;
 }
 
-nav li{
-   display: inline-block;
-}
+nav li{ display: inline-block; }
 
-.logo {
-   height: 45px;
-}
+.logo { height: 45px; }
 
 .brand{
    position: relative;
@@ -83,7 +77,29 @@ nav li{
    font-size: 18px;
    margin-left: 10px;
    font-family: 'Oswald', sans-serif;
+   transition: .5s ease-out;
 }
+
+
+
+.search-icon::after {
+   position: absolute;
+   display:inline-block;
+   content: "\f002";
+   font-family: FontAwesome;
+   color: #0b3550;
+   font-size: 18px;
+
+   top: 0px;
+   right: -22px;
+
+   transition: .5s ease-out;
+}
+
+.main-nav a:hover {color: white; }
+.main-nav a:hover .search-icon::after { color:white !important;}
+
+
 
 header h1 {
    position: relative;
@@ -207,6 +223,7 @@ margin-top: 30px;
    margin-right: 10px;
    line-height: 30px;
    white-space: nowrap;
+   transition: .5s ease-in-out;
 }
 
 .button-later {
@@ -219,9 +236,8 @@ margin-top: 30px;
 }
 
 .button-text {
-   font-size: 10px;
+   font-size: 12px;
    padding-left: 8px;
-   /*width: 125px;*/
 }
 
 .comment-icon, .later-icon, .share-icon{
@@ -235,24 +251,33 @@ margin-top: 30px;
 
 .share-icon{
    background-color: #0b3551;
+   margin-right: 4px;
 }
 
-.comment-icon:before {
+.comment-icon::before {
    content: "\f075";
    color: white;
    font-size: 16px;
 }
 
-.later-icon:before {
+.later-icon::before {
    content: "\f0ee";
    color: white;
    font-size: 16px;
 }
 
-.share-icon:before {
+.share-icon::before {
    content: "\f045";
    color: white;
    font-size: 16px;
+}
+
+.post-buttons a:hover {
+   background-color: #5e686f;
+}
+
+.post-buttons .button-share:hover {
+   background-color: #0b3551;
 }
 
 
@@ -294,6 +319,12 @@ overflow: hidden;
 
 .social-links a {
    color: #a3b3be;
+   transition: .5s ease-out;
+}
+
+.social-links a:hover {
+   color:#196fb1;
+
 }
 
 .advert {
@@ -304,6 +335,12 @@ overflow: hidden;
 .advert > a {
    text-decoration: underline;
    color: #bac6cf;
+   font-size: 16px;
+   transition: .5s ease-out;
+}
+
+.advert > a:hover {
+   color: #196fb1;
 }
 
 aside > section {
@@ -333,9 +370,78 @@ aside > section p {
 
 /*http://stackoverflow.com/a/14821134*/
 hr {
+   clear: both;
    display: block;
-   margin-top: 68px;
    border: 0;
    padding: 0;
-   border-top: 1px solid e1e7ea;
+   border-top: 1px solid #e1e7ea;
+}
+
+
+.popular h1 {
+   text-transform: uppercase;
+   font-size: 58px;
+   text-align: center;
+   font-family: 'Oswald', sans-serif;
+   margin-bottom: 24px;
+
+}
+
+.popular a {
+   display: block;
+   position:relative;
+
+   float:left;
+
+   width: 25%;
+   height: 330px;
+
+   background-repeat:  no-repeat;
+   background-size: cover;
+   background-position: center;
+
+
+}
+
+.popular a::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 96, 172, 0.8);
+   transition: .5s ease-out;
+}
+
+.popular a:nth-child(2){background-image:url(http://www.placecage.com/325/330);}
+.popular a:nth-child(3){background-image: url(http://baconmockup.com/325/330/);}
+.popular a:nth-child(4){background-image: url(http://placekitten.com/325/330);}
+.popular a:nth-child(5){background-image: url(http://placebear.com/325/330);}
+
+
+.popular h2 {
+   font-family: 'Oswald', sans-serif;
+   text-transform: uppercase;
+   font-size: 32px;
+   font-weight: normal;
+   color: #0b3551;
+
+   position: absolute;
+   bottom: 8px;
+   left: 12px;
+
+
+   z-index: 100;
+   transition: .5s ease-out;
+
+}
+
+
+.popular a:hover::before {
+   background-color: transparent;
+}
+
+.popular a:hover h2 {
+   color: white;
 }
