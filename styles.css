@@ -78,7 +78,7 @@ nav li{ display: inline-block; }
    font-size: 18px;
    margin-left: 10px;
    font-family: 'Oswald', sans-serif;
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 
@@ -94,7 +94,7 @@ nav li{ display: inline-block; }
    top: 0px;
    right: -22px;
 
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 .main-nav a:hover {color: white; }
@@ -224,7 +224,7 @@ margin-top: 30px;
    margin-right: 10px;
    line-height: 30px;
    white-space: nowrap;
-   transition: .5s ease-in-out;
+   transition:.25s ease-in-out;
 }
 
 .button-later {
@@ -320,7 +320,7 @@ aside .user-image {
 
 .social-links a {
    color: #a3b3be;
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 .social-links a:hover {
@@ -334,7 +334,7 @@ aside .user-image {
 }
 
 .advert img {
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 .advert img:hover {
@@ -347,7 +347,7 @@ aside .user-image {
    text-decoration: underline;
    color: #bac6cf;
    font-size: 16px;
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 .advert .about:hover {
@@ -423,7 +423,7 @@ hr {
    left: 0;
    right: 0;
    background-color: rgba(0, 96, 172, 0.8);
-   transition: .5s ease-out;
+   transition:.25s;
 }
 
 .popular a:nth-child(2){background-image:url(http://www.placecage.com/325/330);}
@@ -446,7 +446,7 @@ hr {
 
 
    z-index: 100;
-   transition: .5s ease-out;
+   transition:.25s;
 
 }
 
@@ -529,7 +529,7 @@ footer {
    color: #a3b3be;
    font-size: 13px;
    white-space: nowrap;
-   transition: .5s ease-out;
+   transition:.25s;
 
    /*line-height: 14px;*/
 }
