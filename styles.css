@@ -333,14 +333,24 @@ aside .user-image {
    padding: 0 11px;
 }
 
-.advert > a {
+.advert img {
+   transition: .5s ease-out;
+}
+
+.advert img:hover {
+   opacity: .7;
+}
+
+
+
+.advert .about {
    text-decoration: underline;
    color: #bac6cf;
    font-size: 16px;
    transition: .5s ease-out;
 }
 
-.advert > a:hover {
+.advert .about:hover {
    color: #196fb1;
 }
 
