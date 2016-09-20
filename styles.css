@@ -65,6 +65,7 @@ nav li{ display: inline-block; }
 .company-name {
    margin-left: 13px;
    vertical-align: middle;
+   color: #0b3550;
 }
 
 .main-nav {
@@ -114,7 +115,7 @@ header h1 {
 }
 
 header h3 {
-   color:#083451
+   color:#083451;
    position: relative;
    text-align: center;
    margin-top: -16px;
@@ -290,10 +291,10 @@ aside {
 }
 
 aside .user-image {
-position: relative;
-margin: 14px 107.5px 4px 107.5px;
-border-radius: 50%;
-overflow: hidden;
+   position: relative;
+   margin: 14px 107.5px 4px 107.5px;
+   border-radius: 50%;
+   overflow: hidden;
 }
 
 .user-name {
@@ -380,10 +381,11 @@ hr {
 
 .popular h1 {
    text-transform: uppercase;
-   font-size: 58px;
+   font-size: 60px;
    text-align: center;
    font-family: 'Oswald', sans-serif;
-   margin-bottom: 24px;
+   margin-bottom: 31px;
+      color: #0b3551;
 
 }
 
@@ -426,10 +428,11 @@ hr {
    font-size: 32px;
    font-weight: normal;
    color: #0b3551;
+   line-height: 38px;
 
    position: absolute;
-   bottom: 8px;
-   left: 12px;
+   bottom: 10px;
+   left: 14px;
 
 
    z-index: 100;
@@ -443,5 +446,84 @@ hr {
 }
 
 .popular a:hover h2 {
+   color: white;
+}
+
+
+footer {
+   clear:both;
+   position: relative;
+   height: 96px;
+   /*padding: 0 160px;*/
+   background-color: #0b3551;
+}
+
+.copyright {
+   display: inline-block;
+   position: relative;
+   margin-left: 160px;
+
+
+}
+
+
+.copyright .tiy-icon {
+   position:relative;
+   display: inline-block;
+   width: 56px;
+   height: 44px;
+   background-image: url(images/tiy.png);
+   background-size:contain;
+   background-repeat: no-repeat;
+   top: 28px;
+
+}
+
+.copyright span {
+   display:inline-block;
+   position:relative;
+   color: #a3b3be;
+   top: 8px;
+   left: 4px;
+
+   font-size: 13px;
+
+
+}
+
+
+.footer-nav {
+   position: relative;
+   display: inline-block;
+   list-style: none;
+   top: 8px;
+   left:260px;
+   /*box-sizing: content-box;*/
+}
+
+.footer-nav > li {
+      display:inline-block;
+      line-height: 13px;
+      padding-right: 4px;
+}
+
+.footer-nav > li + li{
+
+   padding-left: 8px;
+   border-left: 1px solid #5e686f;
+}
+
+
+
+.footer-nav > li > a {
+   color: #a3b3be;
+   font-size: 13px;
+   white-space: nowrap;
+   transition: .5s ease-out;
+
+   /*line-height: 14px;*/
+}
+
+.footer-nav > li:hover > a {
    color: white;
 }
